@@ -1,7 +1,7 @@
-// Java program to demonstrate working of
+package main;// Java program to demonstrate working of
 // interface.
 import java.io.*;
-
+/*
 // A simple interface
 interface In1
 {
@@ -14,28 +14,40 @@ interface In1
 
 interface In2
 {
-    int b = 20;
-    int total();
+    final int b = 20;
+    int total(int a);
 }
+
+Class InterfaceImplement {
 
 // A class that implements the interface.
-class InterfaceImplement implements In1
-{
+class InterfaceImplement1 implements In1 {
     // Implementing the capabilities of
     // interface.
-    public void display()
-    {
-        System.out.println("Geek");
+    public void display() {
+        System.out.println("Bhuvi");
     }
 
-    // Driver Code
+}
+
+class InterfaceImplement2 implements In2 {
+    // Implementing the capabilities of
+    // interface.
+    public int total(int a) {
+        int tot = a + b;
+        System.out.println(tot);
+        return tot;
+    }
+}
     public static void main (String[] args)
     {
-        InterfaceImplement t1 = new InterfaceImplement();
+        InterfaceImplement1 t1 = new InterfaceImplement1();
         t1.display();
-        InterfaceImplement t1 = new InterfaceImplement();
-        t1.display();
-        System.out.println(a);
+        InterfaceImplement2 t2 = new InterfaceImplement2();
+        int sum = t2.total(10);
+        System.out.println(sum);
 
     }
 }
+
+*/
